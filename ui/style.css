@@ -3,7 +3,16 @@ body {
     background-color: lightgrey;
     margin-top: 75px;
 }
-
+    
+        .container {
+    color: chocolate;
+    font-family: cursive;
+    max-Width: 800px;
+    margin: auto;
+    padding-top: 40;
+    padding-right:50 ;
+         }
+    
 .center {
     text-align: center;
 }
