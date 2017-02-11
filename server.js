@@ -33,6 +33,7 @@ var articleone = {
                          <link href="/ui/style.css" rel="stylesheet" />
                     
                     </head>
+                    <body>
                     <div class="container">
                     <h1> my professional skills</h1>
                     </div>
@@ -41,6 +42,7 @@ var articleone = {
                     <a href="/">back to home</a>
                     </div>
                    ${content};
+                   </body>
                 </html>`;
                 return htmltemplate;
       
