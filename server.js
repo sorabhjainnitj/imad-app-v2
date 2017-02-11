@@ -11,7 +11,7 @@ var articleone = {
              content: `<div>
                <h2>and this is the amazing thing </h2>
                  <hr/>
-                <div class = "container">
+                <div>
                     <p>
                         and this is the content of my first article where i am in and is interesting in coding and many other things.
                     </p>
@@ -33,7 +33,7 @@ var articleone = {
                          <link href="/ui/style.css" rel="stylesheet" />
                     
                     </head>
-                    <div>
+                    <div class="container">
                     <h1> my professional skills</h1>
                     </div>
                     <a href="www.geeksforgeeks.org">want to code and enjoy real world</a>
@@ -41,7 +41,7 @@ var articleone = {
                     <a href="/">back to home</a>
                     </div>
                    ${content};
-                </html>`
+                </html>`;
                 return htmltemplate;
       
   }
