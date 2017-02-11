@@ -21,7 +21,7 @@ var articleone = {
                 </div>
             </div>`
 };
-  function createtemplate(data){
+  function createTemplate(data){
       var title=data.title;
       var date=data.date;
       var heading=html.heading;
@@ -53,7 +53,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/articleone', function (req, res) {
-  res.send(createtemplate(articleone));
+  res.send(createTemplate(articleone));
 });
 app.get('/articletwo', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article2.html'));
