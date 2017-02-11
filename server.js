@@ -5,13 +5,13 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articleone = {
-             title: 'article-one',
+             title: 'articleone',
              date: '9-sep-2016',
              heading: 'this is the heading of article one',
              content: `<div>
                <h2>and this is the amazing thing </h2>
                  <hr/>
-                <div>
+                <div class = "container">
                     <p>
                         and this is the content of my first article where i am in and is interesting in coding and many other things.
                     </p>
