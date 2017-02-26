@@ -12,7 +12,10 @@ body {
     padding-top: 40;
     padding-right:50 ;
          }
-    
+    .skjain{
+        color: blue;
+        font-family: cursive;
+    }
 .center {
     text-align: center;
 }
