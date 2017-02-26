@@ -12,7 +12,7 @@ var articleone ={
   function createtemplate (data)
   { var title=data.title;
      var content=data.content;
- var htmltemplate = `<html>
+    var htmltemplate = `<html>
     <head>
         <title>${title}</title>
         
@@ -22,10 +22,9 @@ var articleone ={
     <body>
         ${content}
     </body>
-</html>
+  </html>
 `;
      return htmltemplate;
- 
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
