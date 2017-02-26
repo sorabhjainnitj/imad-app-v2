@@ -14,13 +14,16 @@ var articleone ={
      var content=data.content;
     var htmltemplate = `<html>
     <head>
+   
         <title>${title}</title>
         
          <link href="/ui/style.css" rel="stylesheet" />
     
     </head>
     <body>
+     <div class="skjain">
         ${content}
+        </div>
     </body>
   </html>
 `;
