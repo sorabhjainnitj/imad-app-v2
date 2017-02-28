@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var element=document.getelement.byid('doremon');
+var element=document.getelementbyid('doremon');
 element.style.resize="200px";
 var articles ={
     'article-one':{
