@@ -16,7 +16,7 @@ var articles ={
     
     'article-two':{
                         
-                        title :'my second web page sorabh jain',
+                        title:'my second web page sorabh jain',
                     
                     content:`
                      
