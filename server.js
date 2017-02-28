@@ -6,40 +6,40 @@ var app = express();
 app.use(morgan('combined'));
 var articles ={
     'article-one':`
-    date: '24-may-2015',
-    content:'this is the content of the first article i am fedding out.', 
-    title: 'jee advance 2015'`,
+                    date: '24-may-2015',
+                    content:'this is the content of the first article i am fedding out.', 
+                    title: 'jee advance 2015'`,
     'article-two':`<html>
-    <head>
-        <title> my second web page sorabh jain</title>
-    </head>
-    <body>
-       <div class="container">
-            <div>
-            <h1> my professional second skills</h1>
-            </div>
-            <a href="www.geeksforgeeks.org">want to code and enjoy real world</a>
-            
-             <div>
-            <a href="/">back to home</a>
-            </div>
-        
-            <div>
-                <h2>and this is the amazing thing </h2>
-                <hr/>
-                <div>date is febuary2017</div>
-                <div>
-                    <p>
-                        and this is the content of my first article where i am in and is interesting in coding and many other things.
-                    </p>
-                </div>
-                <div>
-                   <p>and this is content of the second paragraph you are having right now.</p>
-                </div>
-            </div>
-     </div>
-     </body>
-</html>`,
+                    <head>
+                        <title> my second web page sorabh jain</title>
+                    </head>
+                    <body>
+                       <div class="container">
+                            <div>
+                            <h1> my professional second skills</h1>
+                            </div>
+                            <a href="www.geeksforgeeks.org">want to code and enjoy real world</a>
+                            
+                             <div>
+                            <a href="/">back to home</a>
+                            </div>
+                        
+                            <div>
+                                <h2>and this is the amazing thing </h2>
+                                <hr/>
+                                <div>date is febuary2017</div>
+                                <div>
+                                    <p>
+                                        and this is the content of my first article where i am in and is interesting in coding and many other things.
+                                    </p>
+                                </div>
+                                <div>
+                                   <p>and this is content of the second paragraph you are having right now.</p>
+                                </div>
+                            </div>
+                     </div>
+                     </body>
+                </html>`,
 };
   function createtemplate (data)
   { var title=data.title;
