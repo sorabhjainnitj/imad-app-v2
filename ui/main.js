@@ -1,9 +1,9 @@
 console.log('Loaded!');
-var element1=document.getElementById('count');
-var element2=document.getElementById('counter');
+var button=document.getElementById('count');
+var count=document.getElementById('counter');
 var cout=0;
-element2.onclick = function(){
+button.onclick = function(){
     cout=cout+1;
-    element1.innerHtml = cout.toString();
+    count.innerHtml = cout.toString();
     
     };
