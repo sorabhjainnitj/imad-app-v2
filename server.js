@@ -32,6 +32,8 @@ var articles ={
                             <div>
                                 <h2>and this is the amazing thing </h2>
                                 <hr/>
+                                this button <button id="counter">click me</button> has been pressed <span id="count">0</span>times
+                                <hr/>
                                 <div>date is febuary2017</div>
                                 <div>
                                     <p>
@@ -67,6 +69,7 @@ var articles ={
 `;
      return htmltemplate;
 }
+
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
