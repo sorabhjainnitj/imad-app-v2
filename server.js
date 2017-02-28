@@ -17,7 +17,7 @@ var articles ={
                         title :'my second web page sorabh jain',
                     
                     content:`
-                      <body>
+                     
                             <div>
                             <h1> my professional second skills</h1>
                             </div>
@@ -40,8 +40,8 @@ var articles ={
                                    <p>and this is content of the second paragraph you are having right now.</p>
                                 </div>
                             </div>
-                     </div>
-                     </body>`,
+                     </div>`
+                     
                 
     }
 };
