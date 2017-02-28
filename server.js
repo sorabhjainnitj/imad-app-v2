@@ -5,16 +5,17 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles ={
-    'article-one':`
+    'article-one':{
                     date: '24-may-2015',
                     content:'this is the content of the first article i am fedding out.', 
-                    title: 'jee advance 2015'`,
-    'article-two':`<html>
-                    <head>
-                        <title> my second web page sorabh jain</title>
-                    </head>
-                    <body>
-                       <div class="container">
+                    title: 'jee advance 2015'
+    },
+    'article-two':{
+                        
+                        title :'my second web page sorabh jain',
+                    
+                    content:`
+                      <body>
                             <div>
                             <h1> my professional second skills</h1>
                             </div>
@@ -38,8 +39,9 @@ var articles ={
                                 </div>
                             </div>
                      </div>
-                     </body>
-                </html>`,
+                     </body>`,
+                `
+    }
 };
   function createtemplate (data)
   { var title=data.title;
