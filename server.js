@@ -6,12 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 
+
 var articles ={
     'article-one':{
                     date: '24-may-2015',
                     content:'this is the content of the first article i am fedding out.', 
                     title: 'jee advance 2015'
     },
+    
     'article-two':{
                         
                         title :'my second web page sorabh jain',
@@ -65,6 +67,12 @@ var articles ={
 `;
      return htmltemplate;
 }
+var counter=0;
+app.get('/counter',function(req,res){
+    counter=counter+1;
+    res.send(counter.tostring());
+}
+);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
