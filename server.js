@@ -40,7 +40,7 @@ var articles ={
                             </div>
                      </div>
                      </body>`,
-                `
+                
     }
 };
   function createtemplate (data)
