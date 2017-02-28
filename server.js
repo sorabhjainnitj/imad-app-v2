@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var elemet=document.getElementbyId('doremon');
+
 
 var articles ={
     'article-one':{
