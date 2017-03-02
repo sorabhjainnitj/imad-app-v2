@@ -95,7 +95,7 @@ app.get('/database',function(req,res){
     {
         req.status(500).send(err.toString());
     }
-    else {  req.send(JSON.stringify());
+    else {  req.send(JSON.stringify(result));
         
     }
         
