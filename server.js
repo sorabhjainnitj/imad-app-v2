@@ -85,7 +85,7 @@ var counter=0;
      return hashed.toString('hex');
  }
 app.get('/input/:password',function(req,res){ 
-    var hashpassword=hash(request.params.input,'this-is-a-random-string');
+    var hashpassword=hash(request.params.password,'this-is-a-random-string');
     req.send(hashpassword);
 });
 app.get('/counter',function(req,res){
