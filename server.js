@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+const crypto = require('crypto');
 var app = express();
 app.use(morgan('combined'));
 
@@ -57,6 +57,7 @@ var articles ={
                 
     }
 };
+  
   function createtemplate (data)
   { var title=data.title;
      var content=data.content;
@@ -79,6 +80,14 @@ var articles ={
 }
 
 var counter=0;
+ function hash(input,salt){
+     var hashed=crypto.pbkdf2(input,salt, 10000, 512, 'sha512');
+     return hashed;
+ }
+app.get('/input/:password',function(req,res){ 
+    var hashpassword=hash(request.params.input,'this-is-a-random-string');
+    req.send(hashpassword);
+});
 app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
