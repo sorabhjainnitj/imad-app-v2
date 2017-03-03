@@ -84,8 +84,8 @@ var counter=0;
      var hashed=crypto.pbkdf2(input,salt, 10000, 512, 'sha512');
      return hashed.toString('hex');
  }
-app.get('/input/:password',function(req,res){ 
-    var hashpassword=hash(request.params.password,'this-is-a-random-string');
+app.get('/password/:input',function(req,res){ 
+    var hashpassword=hash(request.params.input,'this-is-a-random-string');
     req.send(hashpassword);
 });
 app.get('/counter',function(req,res){
