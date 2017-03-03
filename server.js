@@ -25,7 +25,7 @@ var articles ={
     'article-two':{
                         
                         title:'my second web page sorabh jain',
-                    
+                     date: '24-may-2015',
                     content:`
                      
                             <div>
