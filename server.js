@@ -10,7 +10,7 @@ var Pool=require('pg').Pool;
              database: 'sorabhjainnitj',
              host: 'db.imad.hasura-app.io',
              port: '5432',
-             password: process.env.DB_PASSWORD
+             password: process.env.sorabhjainnitj
 };
 
 
@@ -99,7 +99,7 @@ app.get('/', function (req, res) {
 var counter=0;
  var pool= new Pool(config);
 app.get('/database',function(req,res){
-    pool.query('SELECT * FROM article',function(err,result)
+    pool.query('SELECT * FROM "article"',function(err,result)
     {   if(err)
     {
         req.status(500).send(err.toString());
