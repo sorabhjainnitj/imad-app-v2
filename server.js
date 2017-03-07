@@ -120,7 +120,8 @@ app.get('/:articleName', function (req, res) {
             res.send(err.toString());
         }
         else {
-            res.send(createtemplate(result.rows[0]))
+            var data=result.rows[0];
+            res.send(createtemplate(data));
         }
     });
  res.send(createtemplate(articles[articleName]));
