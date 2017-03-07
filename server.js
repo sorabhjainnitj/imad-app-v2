@@ -79,17 +79,17 @@ var articles ={
      return htmltemplate;
 } 
  var pool= new Pool(config);
-app.get('/database',function(req,res){
+app.get('/test-db',function(req,res){
     pool.query('SELECT * FROM "article"',function(err,result)
     {   if(err)
-    {
-        req.status(500).send(err.toString());
-    }
-    else {  req.send(JSON.stringify(result));
-        
-    }
-        
-    });
+        {
+            req.status(500).send(err.toString());
+        }
+        else {  req.send(JSON.stringify(result));
+            
+        }
+            
+        });
 }
 );
 
