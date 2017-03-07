@@ -85,7 +85,7 @@ app.get('/test-db',function(req,res){
         {
             req.status(500).send(err.toString());
         }
-        else {  req.send(JSON.stringify(result));
+        else {  res.send(JSON.stringify(result));
             
         }
             
@@ -100,7 +100,7 @@ var counter=0;
  }
 app.get('/password/:input',function(req,res){ 
     var hashpassword=hash(request.params.input,'this-is-a-random-string');
-    req.send(hashpassword);
+    res.send(hashpassword);
 });
 app.get('/counter',function(req,res){
     counter=counter+1;
