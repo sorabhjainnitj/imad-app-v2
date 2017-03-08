@@ -73,15 +73,15 @@ var counter=0;
 
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-    pool.query("SELECT * from articles where title = '" + articleName + "'",function(err,result){
+    pool.query("SELECT * from articles where title = $1", [articleName] ,function(err,result){
         if(err)
         {
             res.send(err.toString());
         }
         else {
-            var data=result.rows[0];
-            res.send(createtemplate(data));
-        }
+              var data=result.rows[0];
+              res.send(createtemplate(data));
+            }
     });
  //res.send(createtemplate(articles[articleName]));
 });
