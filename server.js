@@ -15,48 +15,7 @@ var Pool=require('pg').Pool;
  
 
 
-var articles ={
-    'article-one':{
-                    date: '24-may-2015',
-                    content:' <link href="/ui/style.css" rel="stylesheet" />  this is the content of the first article i am fedding out.', 
-                    title: 'jee advance 2015'
-    },
-    
-    'article-two':{
-                        
-                        title:'my second web page sorabh jain',
-                     date: '24-may-2015',
-                    content:`
-                     
-                            <div>
-                            <h1> my professional second skills</h1>
-                            </div>
-                            <a href="www.geeksforgeeks.org">want to code and enjoy real world</a>
-                            
-                             <div>
-                            <a href="/">back to home</a>
-                            </div>
-                        
-                            <div>
-                                <h2>and this is the amazing thing </h2>
-                                <hr/>
-                                this button <button id="counter">click me</button> has been pressed <span id="count">0</span>times
-                                <hr/>
-                                <div>date is febuary2017</div>
-                                <div>
-                                    <p>
-                                        and this is the content of my first article where i am in and is interesting in coding and many other things.
-                                    </p>
-                                </div>
-                                <div>
-                                   <p>and this is content of the second paragraph you are having right now.</p>
-                                </div>
-                            </div>
-                     </div>`
-                     
-                
-    }
-};
+
   
   function createtemplate(data)
   { var title=data.title;
