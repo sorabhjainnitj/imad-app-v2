@@ -61,6 +61,7 @@ var articles ={
   function createtemplate(data)
   { var title=data.title;
      var content=data.content;
+     var date=data.date;
     var htmltemplate = `<html>
     <head>
    
@@ -71,7 +72,10 @@ var articles ={
     </head>
     <body>
      <div class="skjain">
+     
         ${content}
+        </div>
+        <div>${date}
         </div>
     </body>
   </html>
