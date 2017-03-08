@@ -88,7 +88,7 @@ app.get('/test-db',function(req,res){
     pool.query('SELECT * FROM article',function(err,result)
     {   if(err)
         {
-            req.status(500).send(err.toString());
+            res.status(500).send(err.toString());
         }
         else {  res.send(JSON.stringify(result.rows));
             
@@ -119,7 +119,7 @@ var counter=0;
 
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-    pool.query("SELECT * from articles where title = " + articleName,function(err,result){
+    pool.query("SELECT * from articles where title = '" + articleName+"'",function(err,result){
         if(err)
         {
             res.send(err.toString());
