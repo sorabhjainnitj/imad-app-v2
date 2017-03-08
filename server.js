@@ -74,9 +74,10 @@ var articles ={
      <div class="skjain">
      
         ${content}
-        </div>
+       
         <div>${date}
         </div>
+         </div>
     </body>
   </html>
 `;
