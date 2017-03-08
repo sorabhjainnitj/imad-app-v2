@@ -12,13 +12,13 @@ var Pool=require('pg').Pool;
              port: '5432',
              password: process.env.DB_PASSWORD
 };
-
+ 
 
 
 var articles ={
     'article-one':{
                     date: '24-may-2015',
-                    content:'this is the content of the first article i am fedding out.', 
+                    content:' <link href="/ui/style.css" rel="stylesheet" />  this is the content of the first article i am fedding out.', 
                     title: 'jee advance 2015'
     },
     
