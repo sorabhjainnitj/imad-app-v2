@@ -55,7 +55,7 @@ app.get('/test-db',function(req,res){
 var counter=0;
  function hash(input,salt){
      var hashed=crypto.pbkdf2Sync(input,salt, 10000, 512, 'sha512');
-     return hashed.toString('hex');
+     return ['pbkdf2','10000','salt',hashed.toString('hex')].join('$');
  }
 app.get('/hash/:input',function(req,res){ 
     var hashpassword=hash(request.params.input,'this-is-a-random-string');
@@ -66,6 +66,21 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 }
 );
+app.post('/createuser',function(req,res)
+{  var usname=req.body.username;
+   var pssword=req.body.password;
+   pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[usname,pssword],function(err,result)
+     {
+         if(err)
+         { res.send(err.status(404).tostring());
+             
+         }
+         else{
+             res.send("user created successfully with username " +usname);
+         }
+   });
+    
+});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
