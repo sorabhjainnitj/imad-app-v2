@@ -57,7 +57,7 @@ var counter=0;
      var hashed=crypto.pbkdf2(input,salt, 10000, 512, 'sha512');
      return hashed.toString('hex');
  }
-app.get('/password/:input',function(req,res){ 
+app.get('/pass/:input',function(req,res){ 
     var hashpassword=hash(request.params.input,'this-is-a-random-string');
     res.send(hashpassword);
 });
@@ -66,6 +66,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 }
 );
+app.get('/create-user')
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
