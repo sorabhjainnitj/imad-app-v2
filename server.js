@@ -68,17 +68,17 @@ app.get('/counter',function(req,res){
 }
 );
 app.post('/createuser',function(req,res)
-{  var usname=req.body.username;
-   var pssword=req.body.password;
+{  var username=req.body.username;
+   var password=req.body.password;
    pssword=hash(pssword,'this-is-random-string');
-   pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[usname,pssword],function(err,result)
+   pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[username,password],function(err,result)
      {
          if(err)
          { res.send(err.status(404).tostring());
              
          }
          else{
-             res.send("user created successfully with username " +usname);
+             res.send("user created successfully with username " +username);
          }
    });
     
