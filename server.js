@@ -54,10 +54,10 @@ app.get('/test-db',function(req,res){
 
 var counter=0;
  function hash(input,salt){
-     var hashed=crypto.pbkdf2(input,salt, 10000, 512, 'sha512');
+     var hashed=crypto.pbkdf2Sync(input,salt, 10000, 512, 'sha512');
      return hashed.toString('hex');
  }
-app.get('/pass/:input',function(req,res){ 
+app.get('/hash/:input',function(req,res){ 
     var hashpassword=hash(request.params.input,'this-is-a-random-string');
     res.send(hashpassword);
 });
