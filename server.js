@@ -70,6 +70,7 @@ app.get('/counter',function(req,res){
 app.post('/createuser',function(req,res)
 {  var usname=req.body.username;
    var pssword=req.body.password;
+   pssword=hash(pssword,'this-is-random-string');
    pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[usname,pssword],function(err,result)
      {
          if(err)
