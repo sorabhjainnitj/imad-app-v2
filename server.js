@@ -74,11 +74,11 @@ app.post('/createuser',function(req,res)
    pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[username,password],function(err,result)
      {
          if(err)
-         { res.send(err.status(404).tostring());
+         { res.send(err.status(404).toString());
              
          }
          else{
-             res.send("user created successfully with username " +username);
+             res.send('user created successfully with username ' +username);
          }
    });
     
