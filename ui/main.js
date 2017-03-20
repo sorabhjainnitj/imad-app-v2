@@ -1,9 +1,10 @@
 console.log('Loaded!');
-var button=document.getElementById('count');
-var count=document.getElementById('counter');
+var button=document.getElementById('button');
+var area=document.getElementById('area');
 var cout=0;
 button.onclick = function(){
     cout=cout+1;
-    count.innerHtml = cout.toString();
+    area.innerHtml=cout.toString();
+    
     
     };
