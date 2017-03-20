@@ -59,14 +59,13 @@ var counter=0;
      return ['pbkdf2','10000','salt',hashed.toString('hex')].join('$');
  }
 app.get('/hash/:input',function(req,res){ 
-    var hashpassword=hash(request.params.input,'this-is-a-random-string');
+    var hashpassword=hash(req.params.input,'this-is-a-random-string');
     res.send(hashpassword);
 });
 app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
-}
-);
+});
 app.post('/createuser',function(req,res)
 {  var username=req.body.username;
    var password=req.body.password;
