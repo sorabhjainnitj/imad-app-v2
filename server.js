@@ -71,7 +71,7 @@ app.post('/createuser',function(req,res)
 {  var username=req.body.username;
    var password=req.body.password;
    pssword=hash(pssword,'this-is-random-string');
-   pool.query('Insert into "user" (username,password) VALUES ($1,$2)',[username,password],function(err,result)
+   pool.query('insert into "user" (username,password) VALUES ($1,$2)',[username,password],function(err,result)
      {
          if(err)
          { res.send(err.status(404).toString());
@@ -89,9 +89,9 @@ app.get('/', function (req, res) {
 });
 var counter=0;
 
-app.get('/:articleName', function (req, res) {
+app.get('/articles/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-    pool.query("SELECT * from articles where title = $1", [articleName] ,function(err,result){
+    pool.query("SELECT * from articles where title = '$1'", [articleName] ,function(err,result){
         if(err)
         {
             res.send(err.toString());
