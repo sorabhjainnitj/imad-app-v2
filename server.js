@@ -100,7 +100,7 @@ app.get('/articles/:articleName', function (req, res) {
             }
     });
 });
-app.get('/submit-name/:getname',function(req,res){
+app.get('/submitname/:getname',function(req,res){
     var inputname=req.params.getname;
      req.send(getname.toString()); 
 });
