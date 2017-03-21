@@ -102,7 +102,7 @@ app.get('/articles/:articleName', function (req, res) {
 });
 app.get('/submitname/:getname',function(req,res){
     var inputname=req.params.getname;
-     req.send(inputname.toString()); 
+     res.send(inputname.toString()); 
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
