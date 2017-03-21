@@ -92,8 +92,7 @@ app.get('/articles/:articleName', function (req, res) {
     var articlename=req.params.articleName;
     pool.query("SELECT * from articles where title = $1", [articlename] ,function(err,result){
         if(err)
-        {
-            res.send(err.toString());
+        {     res.send(err.toString());
         }
         else {
               var data=result.rows[0];
