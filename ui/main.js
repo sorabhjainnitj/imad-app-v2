@@ -18,10 +18,4 @@ button.onclick = function(){
   request.open('GET','http://sorabhjainnitj.imad.hasura-app.io/counter',true);
   request.send(null);
 };
-var namelisting=document.getElementbyId('namelist');
-var inputbutton=document.getElementbyId('submit');
-inputbutton.onclick=function(){
-var name1=doucment.getElementbyId('name');
-namelisting.innerHTML=name1.
-name1.value;
-};
+var gname=document.getElementbyId('name');
