@@ -23,12 +23,11 @@ var lgnbtn=document.getElementbyid('register');
 lgnbtn.onclick=function(){ 
     var username=document.getElementbyId('name').value;
      var password=document.getElementbyId('userpassword').value;
-
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttprequest.DONE)
           { if(request.status===200)
-            { area.innerHTML='you have been logged in successfully';
+            { area.innerHTML='you have been registered successfully';
             }
           }
     };
