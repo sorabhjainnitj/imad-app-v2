@@ -8,9 +8,11 @@ button.onclick = function(){
     request.onreadystatechange=function(){
     if(request.readyState===XMLHttpRequest.DONE)
     {   if(request.status==200)
-    cout=request.responseText;
+       { cout=request.responseText;
         area.innerHTML=cout.toString();
-    }
+       }
+           
+       }
 };
 
   request.open('GET',"https://sorabhjainnitj.imad.hasura-app.io/counter",true);
