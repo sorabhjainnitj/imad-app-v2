@@ -101,7 +101,7 @@ app.get('/articles/:articleName', function (req, res) {
     });
 });
 app.get('/submitname/:getname',function(req,res){
-    var inputname=req.params.getname;
+    
      res.send(inputname.toString()); 
 });
 app.get('/ui/style.css', function (req, res) {
