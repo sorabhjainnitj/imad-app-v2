@@ -21,6 +21,7 @@ button.onclick = function(){
 
 var lgnbtn=document.getElementbyid('register');
 lgnbtn.onclick=function(){ 
+    var area=document.getElementbyId('userlog');
     var username=document.getElementbyId('name').value;
      var password=document.getElementbyId('userpassword').value;
     var request=new XMLHttpRequest();
