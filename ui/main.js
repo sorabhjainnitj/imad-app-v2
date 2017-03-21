@@ -18,16 +18,22 @@ button.onclick = function(){
   request.open('GET','http://sorabhjainnitj.imad.hasura-app.io/counter',true);
   request.send(null);
 };
-var gname=document.getElementbyId('name');
-var submit=document.getElementbyId('submitbtn');
-submit.onclick=function(){
-    var names=['name1','name2','name3'];
-var list='';
-for(var i=0;i<names.length;i++)
-{
-    list=list+'<li>' +names[i]+'</li>';
-}
-var ole=document.getElementbyId('namelist');
-    ole.innerHTML=list.toString();
-};
 
+var lgnbtn=document.getElementbyid('register');
+lgnbtn.onclick=function(){ 
+    var username=document.getElementbyId('name').value;
+     var password=document.getElementbyId('userpassword').value;
+
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readystate===XMLHttprequest.DONE)
+          { if(request.status===200)
+            { area.innerHTML='you have been logged in successfully';
+            }
+          }
+    };
+    request.open('POST','http://sorabhjainnitj.imad.hasura-app.io/createuser',true);
+    request.setRequestHeader('content-type','application/json');
+    request.send(JSON.stringify({username: username,password: password }));
+    
+};
