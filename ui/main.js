@@ -19,3 +19,15 @@ button.onclick = function(){
   request.send(null);
 };
 var gname=document.getElementbyId('name');
+var submit=document.getElementbyId('submit');
+submit.onclick=function(){
+    var names=['name1','name2','name3'];
+var list='';
+for(var i=0;i<names.length;i++)
+{
+    list=list+'<li>' +names[i]+'</li>';
+}
+var ole=document.getElementbyId('namelist');
+    ole.innerHTML=list.toString();
+};
+
