@@ -18,7 +18,7 @@ lgnbtn.onclick=function(){
           }
     };
     request.open('POST','http://sorabhjainnitj.imad.hasura-app.io/createuser',true);
-    request.setRequestHeader('content-type','application/json');
-    request.send(JSON.stringify({username: username,password: password }));
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username: username, password: password }));
     
 };
