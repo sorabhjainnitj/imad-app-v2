@@ -33,8 +33,8 @@ lgnbtn.onclick=function(){
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE)
           {  if(request.status===500)
-            {   areaname.innerHTML='something went wrong on the server';
-            }
+             {   areaname.innerHTML='something went wrong on the server';
+             }
               if(request.status===200)
             { areaname.innerHTML='you have been logged in successfully';
             }
