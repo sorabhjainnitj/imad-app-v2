@@ -109,7 +109,7 @@ app.post('/login',function(req,res){
          { res.status(500).send(err.status(404).toString());
          }
          else{ if(result.rows.length===0)
-                {res.status(404);
+                {res.status(404).send('credintials are invalid');
                 }
                else { var matchstring=result.rows[0].password;
                      var salt=matchstring.split('$')[2];
