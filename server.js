@@ -116,9 +116,9 @@ app.post('/login',function(req,res){
                       var comestring=hash(password,salt);
                       if(comestring===matchstring)
                       {
-                          res.status(200).send('you have been logged in successfully');
+                      res.status(200).send('you have been logged in successfully');
                       }
-               }
+                    }
             
          }
    });
