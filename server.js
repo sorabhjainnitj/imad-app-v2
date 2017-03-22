@@ -107,7 +107,6 @@ app.post('/login',function(req,res){
      {
          if(err)
          { res.status(500).send(err.status(404).toString());
-             
          }
          else{ if(result.rows.length===0)
                 {res.status(404);
