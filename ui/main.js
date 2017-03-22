@@ -21,9 +21,9 @@ button.onclick = function(){
 
 var lgnbtn=document.getElementbyid('submitbtn');
 lgnbtn.onclick=function(){ 
-    var areaname=document.getElementbyId('userlog');
-    var username=document.getElementbyId('name').value;
-     var password=document.getElementbyId('userpassword').value;
+    var areaname=document.getElementById('userlog');
+    var username=document.getElementById('name').value;
+     var password=document.getElementById('userpassword').value;
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttprequest.DONE)
