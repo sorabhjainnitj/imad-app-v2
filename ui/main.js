@@ -24,6 +24,8 @@ lgnbtn.onclick=function(){
     var areaname=document.getElementById('userlog');
     var username=document.getElementById('name').value;
      var password=document.getElementById('userpassword').value;
+     console.log(username);
+     console.log(password);
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttprequest.DONE)
