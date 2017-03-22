@@ -103,9 +103,7 @@ app.get('/articles/:articleName', function (req, res) {
 app.post('/login',function(req,res){
     var username=req.body.username;
    var password=req.body.password;
-   var hashpassword=hash(password,'this-is-random-string');
-   
-   pool.query('select * from  "user" where username=$1 ',[username,hashpassword],function(err,result)
+   pool.query('select * from  "user" where username=$1 ',[username],function(err,result)
      {
          if(err)
          { res.status(500).send(err.status(404).toString());
