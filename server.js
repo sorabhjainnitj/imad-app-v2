@@ -105,15 +105,24 @@ app.post('/login',function(req,res){
    var password=req.body.password;
    var hashpassword=hash(password,'this-is-random-string');
    
-   pool.query('select * from  "user" where username=$1 and password=$2',[username,hashpassword],function(err,result)
+   pool.query('select * from  "user" where username=$1 ',[username,hashpassword],function(err,result)
      {
          if(err)
-         { res.send(err.status(404).toString());
+         { res.status(500).send(err.status(404).toString());
              
          }
          else{ if(result.rows.length===0)
-             res.send('user or password is incorrect  ' +username);
-             else res.send('user has been login successfully');
+                {res.status(404);
+                }
+               else { var matchstring=result.rows[0].password;
+                     var salt=matchstring.split('$')[2];
+                      var comestring=hash(password,salt);
+                      if(comestring===matchstring)
+                      {
+                          res.status(200).send('you have been logged in successfully');
+                      }
+               }
+            
          }
    });
 });
