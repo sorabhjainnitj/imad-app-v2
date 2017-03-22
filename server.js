@@ -70,7 +70,7 @@ app.post('/createuser',function(req,res)
 {  var username=req.body.username;
    var password=req.body.password;
    pssword=hash(pssword,'this-is-random-string');
-   pool.query('insert into "user" (username,password) VALUES ($1,$2)',[username,password],function(err,result)
+   pool.query('insert into "user" (username,password) VALUES ($1,$2)',[username,pssword],function(err,result)
      {
          if(err)
          { res.send(err.status(404).toString());
