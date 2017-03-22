@@ -19,7 +19,7 @@ button.onclick = function(){
   request.send(null);
 };
 
-var lgnbtn=document.getElementbyid('register');
+var lgnbtn=document.getElementbyid('submitbtn');
 lgnbtn.onclick=function(){ 
     var areaname=document.getElementbyId('userlog');
     var username=document.getElementbyId('name').value;
