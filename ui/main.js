@@ -32,9 +32,15 @@ lgnbtn.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE)
-          { if(request.status===200)
-            { areaname.innerHTML='you have been registered successfully';
+          {  if(request.status===500)
+            {   areaname.innerHTML='something went wrong on the server';
             }
+              if(request.status===200)
+            { areaname.innerHTML='you have been logged in successfully';
+            }
+            else if(request.status===404)
+            {   areaname.innerHTML=' username or password is incorrect';
+             }
           }
     };
     request.open('POST','http://sorabhjainnitj.imad.hasura-app.io/login',true);
