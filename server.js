@@ -100,6 +100,23 @@ app.get('/articles/:articleName', function (req, res) {
             }
     });
 });
+app.post('/login',function(req,res){
+    var username=req.body.username;
+   var password=req.body.password;
+   var hashpassword=hash(password,'this-is-random-string');
+   
+   pool.query('select * from  "user" where username=$1 and password=$2',[username,hashpassword],function(err,result)
+     {
+         if(err)
+         { res.send(err.status(404).toString());
+             
+         }
+         else{ if(result.rows.length===0)
+             res.send('user or password is incorrect  ' +username);
+             else res.send('user has been login successfully');
+         }
+   });
+});
 app.get('/submitname/:getname',function(req,res){
     
      res.send(inputname.toString()); 
