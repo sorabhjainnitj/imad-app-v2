@@ -118,6 +118,9 @@ app.post('/login',function(req,res){
                       {
                        res.send('you have been logged in successfully');
                       }
+                      else {
+                          res.status(404).send('credintials are invalid');
+                      }
                     }
             
          }
