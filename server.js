@@ -116,7 +116,7 @@ app.post('/login',function(req,res){
                       var comestring=hash(password,salt);
                       if(comestring===matchstring)
                       {
-                       res.send('you have been logged in successfully');
+                       res.status(200).send('you have been logged in successfully');
                       }
                       else {
                           res.status(404).send('credintials are invalid');
