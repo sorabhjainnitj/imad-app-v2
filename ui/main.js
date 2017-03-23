@@ -35,7 +35,7 @@ lgnbtn.onclick=function(){
           {  if(request.status===500)
              {   alert('something went wrong on the server');
              }
-              if(request.status===200)
+           else   if(request.status===200)
             { alert('you have been logged in successfully');
             }
             else if(request.status===404)
