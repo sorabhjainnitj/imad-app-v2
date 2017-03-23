@@ -32,7 +32,8 @@ lgnbtn.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState===XMLHttpRequest.DONE)
-          {  if(request.status===500)
+          {  console.log('request has been completed');
+              if(request.status===500)
              {   alert('something went wrong on the server');
              }
            else   if(request.status===200)
